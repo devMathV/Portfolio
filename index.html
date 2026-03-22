@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Matheus Viégas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/1e76331107.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <p id="nome">Matheus Viégas</p>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Certificações</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </nav>
+        <div id="configs">
+            <p id="idioma" onclick="mudarIdioma()">PT-BR</p>
+            <p id="tema" onclick="mudarTema()"><i class="fa-solid fa-moon"></i></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio-container">
+
+        </section>
+
+        <section id="conteudo-container">
+            <article id="sobre-mim">
+                
+            </article> <!-- Fim article#sobre-mim -->
+
+            <article id="cursos">
+
+            </article> <!-- Fim article#cursos -->
+
+            <article id="projetos">
+
+            </article> <!-- Fim article#projetos -->
+
+            <article id="contatos">
+
+            </article> <!-- Fim article#contatos -->
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        function mudarTema() {
+            let tema = document.querySelector('#tema')
+            if (tema.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+                tema.innerHTML = '<i class="fa-solid fa-sun"></i>'
+            } else {
+                tema.innerHTML = '<i class="fa-solid fa-moon"></i>'
+            }
+        }
+        function mudarIdioma() {
+            let idioma = document.querySelector('#idioma')
+            if (idioma.innerHTML === 'PT-BR') {
+                idioma.innerHTML = 'EN-US'
+            } else {
+                idioma.innerHTML = 'PT-BR'
+            }
+        }
+    </script>
+</body>
+
+</html>
