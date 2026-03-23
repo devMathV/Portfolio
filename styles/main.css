@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
-/* :root {
-
-} */
+:root {
+    --texto: #103042;
+    --texto-inverso: #ebebeb;
+    --fundo: #ebebeb;
+    --fundo-inverso: #103042;
+}
 
 * {
     margin: 0;
@@ -12,16 +15,19 @@
 }
 
 header {
-    background-color: lightgray;
+    background-color: var(--fundo-inverso);
     position: sticky;
     display: grid;
-    grid-template-columns: 150px 1fr 500px 1fr 150px;
+    grid-template-columns: 150px 1fr 400px 1fr 150px;
     align-items: center;
     padding: 20px;
     top: 0;
+    color: var(--texto-inverso);
 
     #nome {
-
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2em;
+        font-weight: bold;
     }
 
     nav {
@@ -34,6 +40,7 @@ header {
         }
         a {
             text-decoration: none;
+            color: var(--texto-inverso);
         }
     } /*Fim barra de navegação*/
 
@@ -46,4 +53,81 @@ header {
             cursor: pointer;
         }
     }
+}
+
+#sobre-mim, #projetos, #contatos {
+    display: grid;
+    grid-template-columns: auto 70vw auto;
+}
+
+#inicio-container {
+    height: 90vh;
+    background-color: var(--fundo);
+}
+
+article#sobre-mim {
+    h2 {
+        position: absolute;
+        bottom: -20px;
+        left: 14.5vw;
+        color: var(--texto);
+        font-size: 4em;
+    }
+    #stacks {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+        #dados {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 40%;
+            color: var(--texto);
+
+            h4 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+            .tags {
+                display: flex;
+                gap: 15px;
+                p {
+                    padding: 10px;
+                    border: 2px solid var(--texto);
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        #card-sobre-mim {
+            background-color: var(--fundo-inverso);
+            width: 500px;
+            align-content: center;
+            text-align: right;
+            aspect-ratio: 1 / 1;
+            color: var(--texto-inverso);
+            padding: 40px 0px 40px 50px;
+            border-radius: 50% 0 0 50%;
+            h3 {
+                grid-row: 2;
+                padding-bottom: 30px;
+                font-size: 2.5em;
+            }
+            p {
+                grid-row: 3;
+                padding-bottom: 40px;
+                font-size: 1.2em;
+            }
+            #card-sociais {
+                grid-row: 4;
+                font-size: 3em;
+            }
+        }
+    }
+}
+#fundoazul {
+    grid-column: 3;
+    background-color: var(--fundo-inverso);
+    z-index: -1;
 }
