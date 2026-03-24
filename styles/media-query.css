@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1000px) {
+    #inicio-container {
+        #conteudo-inicio {
+            grid-template-columns: auto 1fr auto;
+            justify-items: center;
+            #texto-inicio {
+                grid-column: 2;
+            }
+            img {
+                grid-column: 2;
+                animation: girar 5s linear infinite;
+            }
+        }
+    }
+
+    @keyframes girar {
+        from { transform: rotate(0deg);}
+        to { transform: rotate(360deg);}
+    }
+
+    #sobre-mim, #projetos, #contatos {
+        grid-template-columns: auto 85vw auto;
+    }
+
+    article#sobre-mim {
+        #stacks {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            margin-top: 70px;
+            h2 {
+                margin-top: -110px;
+            }
+            #dados {
+                grid-row: 2;
+                width: 100%;
+                flex-flow: row wrap;
+                justify-content: space-between;
+
+                .tags-container {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 200px;
+
+                    .tags-sobre-mim {
+                        flex-basis: 1 1 150px;
+                    }
+                }
+            }
+            #card-sobre-mim {
+                width: 100%;
+                grid-row: 1;
+                height: 400px;
+                aspect-ratio: none;
+                border-radius: initial;
+                text-align: left;
+                padding: 0;
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+        #fundoazul {
+            height: 400px;
+            margin-top: 70px;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #fundoazul2 {
+            height: 400px;
+            margin-top: 70px;
+            grid-row: 1;
+            grid-column: 3;
+            background-color: var(--azul-escuro);
+            z-index: -1;
+        }
+    }
+
+    .projeto-info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-mim, #projetos, #contatos {
+        grid-template-columns: auto 80vw auto;
+    }
+}

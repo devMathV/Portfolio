@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Matheus Viégas</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/media-query.css">
     <script src="https://kit.fontawesome.com/1e76331107.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,10 +21,10 @@
                 <li><a href="#">Contatos</a></li>
             </ul>
         </nav>
-        <div id="configs">
+        <!-- <div id="configs">
             <p id="idioma" onclick="mudarIdioma()">PT-BR</p>
             <p id="tema" onclick="mudarTema()"><i class="fa-solid fa-moon"></i></p>
-        </div>
+        </div> -->
     </header>
 
     <main>
@@ -33,7 +34,7 @@
                     <h2>Desenvolvedor <span>Full Stack</span></h2>
                     <p>Do back-end ao front-end: construindo pontes entre dados e experiência.</p>
                 </div>
-                <img src="images/boneco-matheus.png" alt="">
+                <img src="images/boneco-matheus.png" alt="Boneco de Matheus Viégas">
             </div>
         </section>
 
@@ -42,36 +43,37 @@
                 <div id="stacks">
                     <h2>Sobre mim</h2>
                     <div id="dados">
-                        <div>
+                        <div class="tags-container">
                             <h4><i class="fa-solid fa-display"></i> Front-End</h4>
-                            <div class="tags">
+                            <div class="tags-sobre-mim">
                                 <p>HTML5</p>
                                 <p>CSS3</p>
                                 <p>Javascript</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="tags-container">
                             <h4><i class="fa-solid fa-laptop-code"></i> Back-End</h4>
-                            <div class="tags">
+                            <div class="tags-sobre-mim">
                                 <p>Node.js</p>
                                 <p>.NET</p>
                                 <p>Typescript</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="tags-container">
                             <h4><i class="fa-solid fa-database"></i> Banco de Dados</h4>
-                            <div class="tags">
+                            <div class="tags-sobre-mim">
                                 <p>MySQL</p>
                                 <p>SQL</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="tags-container">
                             <h4><i class="fa-solid fa-microchip"></i> Tecnologias</h4>
-                            <div class="tags">
+                            <div class="tags-sobre-mim">
                                 <p>GitHub</p>
                                 <p>Git</p>
                                 <p>VSCode</p>
                                 <p>Postman</p>
+                                <p>APIs Rest</p>
                             </div>
                         </div>
                     </div>
@@ -86,6 +88,7 @@
                     </div>
                 </div> <!-- Fim div#stacks -->
                 <div id="fundoazul"></div>
+                <div id="fundoazul2"></div>
                 <div class="linha"></div>
                 <div id="cards-container">
                     <div class="card" style="grid-column: 1;">
@@ -107,7 +110,84 @@
             </article> <!-- Fim article#sobre-mim -->
 
             <article id="projetos">
-
+                <div id="conteudo">
+                    <h2>Projetos</h2>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto01.png" alt="Projeto 01">
+                        <div class="descricao-projeto">
+                            <h3>API REST com CRUD em Node.js</h3>
+                            <div class="tags-projeto">
+                                <p>Node.js</p>
+                                <p>API REST</p>
+                                <p>Typescript</p>
+                                <p>CRUD</p>
+                                <p>Express</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto02.png" alt="Projeto 02">
+                        <div class="descricao-projeto">
+                            <h3>API REST com CRUD em .NET</h3>
+                            <div class="tags-projeto">
+                                <p>.NET</p>
+                                <p>API REST</p>
+                                <p>C#</p>
+                                <p>CRUD</p>
+                                <p>Entity Framework</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto03.png" alt="Projeto 03">
+                        <div class="descricao-projeto">
+                            <h3>Minimal API em Node.js</h3>
+                            <div class="tags-projeto">
+                                <p>Node.js</p>
+                                <p>API</p>
+                                <p>Typescript</p>
+                                <p>Fastify</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto04.png" alt="Projeto 04">
+                        <div class="descricao-projeto">
+                            <h3>Podcast API em Node.js</h3>
+                            <div class="tags-projeto">
+                                <p>Node.js</p>
+                                <p>API</p>
+                                <p>Typescript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto05.png" alt="Projeto 05">
+                        <div class="descricao-projeto">
+                            <h3>Carrinho de Compras em Node.js</h3>
+                            <div class="tags-projeto">
+                                <p>Node.js</p>
+                                <p>API</p>
+                                <p>Typescript</p>
+                                <p>npm</p>
+                                <p>Package</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <img src="images-projeto/projeto06.png" alt="Projeto 06">
+                        <div class="descricao-projeto">
+                            <h3>Gerador de QRCode em Node.js</h3>
+                            <div class="tags-projeto">
+                                <p>Node.js</p>
+                                <p>API</p>
+                                <p>Typescript</p>
+                                <p>npm</p>
+                                <p>Package</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Fim div#conteudo -->
             </article> <!-- Fim article#projetos -->
 
             <article id="contatos">
@@ -119,7 +199,7 @@
     <footer>
 
     </footer>
-    <script>
+    <!-- <script>
         function mudarTema() {
             let tema = document.querySelector('#tema')
             if (tema.innerHTML === '<i class="fa-solid fa-moon"></i>') {
@@ -136,7 +216,7 @@
                 idioma.innerHTML = 'PT-BR'
             }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
