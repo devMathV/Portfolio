@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Contatos</a></li>
             </ul>
@@ -28,13 +28,19 @@
 
     <main>
         <section id="inicio-container">
-
+            <div id="conteudo-inicio">
+                <div id="texto-inicio">
+                    <h2>Desenvolvedor <span>Full Stack</span></h2>
+                    <p>Do back-end ao front-end: construindo pontes entre dados e experiência.</p>
+                </div>
+                <img src="images/boneco-matheus.png" alt="">
+            </div>
         </section>
 
         <section id="conteudo-container">
             <article id="sobre-mim">
-                <h2>Sobre mim</h2>
                 <div id="stacks">
+                    <h2>Sobre mim</h2>
                     <div id="dados">
                         <div>
                             <h4><i class="fa-solid fa-display"></i> Front-End</h4>
@@ -80,15 +86,22 @@
                     </div>
                 </div> <!-- Fim div#stacks -->
                 <div id="fundoazul"></div>
+                <div class="linha"></div>
                 <div id="cards-container">
-                    <div class="card">
-                        <img src="" alt="">
+                    <div class="card" style="grid-column: 1;">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h4>Aprendizado contínuo</h4>
+                        <p>Meu esforço junto a minha facilidade de aprender me tornam um profissional preparado para qualquer situação e sempre em busca de aprender e desenvolver meu conhecimento.</p>
                     </div>
-                    <div class="card">
-                        <img src="" alt="">
+                    <div class="card" style="grid-column: 3;">
+                        <i class="fa-solid fa-crown"></i>
+                        <h4>Foco em resultados</h4>
+                        <p>O meu objetivo vai além do código. Busco entender o problema e desenvolver a melhor solução que gere de fato impacto real ao negócio e usuários.</p>
                     </div>
-                    <div class="card">
-                        <img src="" alt="">
+                    <div class="card" style="grid-column: 5;">
+                        <i class="fa-solid fa-folder-tree"></i>
+                        <h4>Arquitetura de código</h4>
+                        <p>Desenvolver código não é apenas fazê-lo funcionar, mas torná-lo entendível a longo prazo. Sempre busco desenvolver o código visando a sua legibilidade e manutenção futura.</p>
                     </div>
                 </div>
             </article> <!-- Fim article#sobre-mim -->
