@@ -349,6 +349,5 @@ article#sobre-mim > div#cards-container {
     background-color: var(--cinza-claro);
     #conteudo-contatos {
         grid-column: 2;
-        
     }
 }

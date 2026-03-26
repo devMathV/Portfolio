@@ -136,4 +136,14 @@
     #title-sobre-mim {
         width: 90vw;
     }
+    #sobre-mim {
+        #inicio-sobre-mim {
+            #info-sobre-mim {
+                grid-template-columns: var(--tamanho-max-470);
+            }
+            #stacks-sobre-mim {
+                width: 90vw;
+            }
+        }
+    }
 }
