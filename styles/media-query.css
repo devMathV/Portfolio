@@ -108,9 +108,23 @@
         header > nav > #menuIcone {
             display: block;
         }
+        div.linha {
+            margin: 70px 0;
+        }
+        article#sobre-mim > div#cards-container {
+            margin-bottom: 100px;
+        }
         .projeto-info {
             grid-template-columns: 1fr;
             gap: 0;
+        }
+        #botao-projetos {
+            margin-bottom: 90px;
+        }
+    }
+    @media screen and (max-width: 520px) {
+        div#conteudo-inicio {
+            margin-top: -75px;
         }
     }
 }
