@@ -2,8 +2,11 @@
 
 :root {
     --azul-escuro: #103042;
+    --azul-meio-escuro: #1f5677;
     --cinza-claro: #ebebeb;
     --azul-claro: #238ac6;
+    --fonte-tituloh2: clamp(3em, 4vw, 4em);
+    --fonte-tituloh3: 
 }
 
 * {
@@ -20,42 +23,46 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 20px;
     color: var(--cinza-claro);
     z-index: 5;
     top: 0;
 
     #nome {
         font-family: 'Times New Roman', Times, serif;
-        font-size: 1.3em;
+        font-size: clamp(1.5em, 4vw ,1.8em);
         font-weight: bold;
+        padding-left: 15px;
     }
 
     nav {
         grid-column: 3;
-
         ul {
             list-style: none;
             display: flex;
-            gap: 20px;
             justify-content: space-between;
         }
         a {
             text-decoration: none;
             color: var(--cinza-claro);
+            p {
+                background-color: var(--azul-escuro);
+                font-size: 1.2em;
+                padding: 25px clamp(15px, 1.8vw, 25px);
+            }
         }
-    } /*Fim barra de navegação*/
-
-    #configs {
-        grid-column: 5;
-        display: flex;
-        justify-content: space-around;
-
-        #idioma, #tema {
+        #menuIcone {
+            font-size: 2em;
+            padding: 20px;
+            display: none;
             cursor: pointer;
         }
-    }
+    } 
+} /*Fim do menu*/
+
+header > nav > ul > li > a > p:hover {
+    background-color: var(--azul-meio-escuro);
 }
+
 
 #inicio-container {
     background: url(../images/fundo-inicio.jpg) center center;
@@ -80,17 +87,17 @@ header {
         background-color: var(--azul-claro);
         padding: 30px;
         border: 3px solid white;
-        width: 360px;
+        max-width: 360px;
         
         h2 {
             grid-column: 1;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: clamp(1.8em, 3vw, 2.6em);
+            margin-bottom: 10px;
             color: var(--cinza-claro);
 
             span {
                 font-family: 'Times New Roman', Times, serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 4vw, 3em);
                 color: var(--azul-escuro);
             }
         }
@@ -102,11 +109,12 @@ header {
         }
     }
 
-    img {
-        grid-column: 2;
-        height: 350px;
-        aspect-ratio: 1 / 1;
-        animation: saltar 5s ease-in-out infinite;
+    picture {
+        img {
+            grid-column: 2;
+            max-height: 350px;
+            animation: saltar 5s ease-in-out infinite;
+        }
     }
 }
 
@@ -148,77 +156,89 @@ header {
 
 #conteudo-container h2 {
     position: absolute;
-    margin-top: -40px;
+    margin-top: -37px;
     color: var(--azul-escuro);
-    font-size: 4em;
+    font-size: var(--fonte-tituloh2);
     text-shadow: 0px -1px 2px var(--azul-escuro);
 }
 
-#sobre-mim, #projetos, #contatos {
+#projetos, #contatos {
     display: grid;
-    grid-template-columns: auto 70vw auto;
+    grid-template-columns: 1fr 70vw 1fr;
 }
 
-article#sobre-mim {
-    #stacks {
+#title-sobre-mim {
+    width: 70vw;
+    height: 4em;
+    margin: auto;
+}
+
+#sobre-mim {
+    display: grid;
+    grid-template-columns: 1fr 70vw 1fr;
+    #inicio-sobre-mim {
         grid-column: 2;
         display: flex;
         justify-content: space-between;
-        gap: 20px;
-        #dados {
-            margin-top: 70px;
+        #stacks-sobre-mim {
             display: flex;
             flex-direction: column;
             gap: 40px;
-            width: 40%;
-            color: var(--azul-escuro);
-
-            h4 {
-                font-size: 1.6em;
-                margin-bottom: 20px;
-            }
-            .tags-sobre-mim {
-                display: flex;
-                flex-flow: row wrap;
-                gap: 15px;
-                p {
-                    padding: 10px;
-                    border: 2px solid var(--azul-escuro);
-                    border-radius: 8px;
+            .stacks-item {
+                h4 {
+                    color: var(--azul-escuro);
+                    margin-bottom: 15px;
+                    font-size: 1.6em;
+                }
+                .stacks-tags {
+                    display: flex;
+                    flex-flow: row wrap;
+                    gap: 12px;
+                    p {
+                        padding: 10px;
+                        border: 2px solid var(--azul-escuro);
+                        border-radius: 8px;
+                        color: var(--azul-escuro);
+                    }
                 }
             }
-        }
-
-        #card-sobre-mim {
+        } /* Fim div#stacks-sobre-mim */
+        #info-sobre-mim {
             background-color: var(--azul-escuro);
-            width: 500px;
-            align-content: center;
-            text-align: right;
-            aspect-ratio: 1 / 1;
             color: var(--cinza-claro);
-            padding: 40px 0px 40px 50px;
             border-radius: 50% 0 0 50%;
+            display: grid;
+            align-content: center;
+            text-align: end;
+            padding-left: 50px;
+            max-width: 500px;
+            margin-top: -4em;
             h3 {
-                grid-row: 2;
-                padding-bottom: 30px;
-                font-size: 2.5em;
+                font-size: clamp(2em, 3.5vw, 2.8em);
             }
             p {
-                grid-row: 3;
-                padding-bottom: 40px;
-                font-size: 1.2em;
+                margin: 20px 0;
+                font-size: clamp(1em, 2vw, 1.2em);
             }
-            #card-sociais {
-                grid-row: 4;
+            #icones-sociais {
                 font-size: 3em;
+                display: flex;
+                justify-content: right;
+                gap: 20px;
+                a {
+                    color: var(--cinza-claro);
+                }
             }
-        }
+        } /* Fim div#info-sobre-mim*/
     }
-    #fundoazul {
-        grid-column: 3;
-        background-color: var(--azul-escuro);
-        z-index: -1;
-    }
+}
+
+article#sobre-mim > div#fundo-azul {
+    background-color: var(--azul-escuro);
+    columns: 3;
+    margin-left: -1px;
+    margin-top: -4em;
+    z-index: -1;
 }
 
 div.linha {
@@ -261,7 +281,7 @@ article#sobre-mim > div#cards-container {
 
 #projetos {
     background-color: var(--azul-claro);
-    #conteudo {
+    #conteudo-projetos {
         grid-column: 2;
         display: flex;
         flex-flow: row wrap;
@@ -274,13 +294,13 @@ article#sobre-mim > div#cards-container {
 
         .projeto-info {
             background-color: var(--azul-escuro);
-            gap: 20px;
             flex: 1 0 340px;
             padding: 20px;
             border-radius: 8px;
             color: var(--cinza-claro);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.350);
             img {
-                width: 300px;
+                width: 100%;
             }
 
             .descricao-projeto {
@@ -301,5 +321,34 @@ article#sobre-mim > div#cards-container {
                 }
             }
         }
+    }
+}
+
+#botao-projetos {
+    grid-column: 2;
+    background-color: var(--azul-escuro);
+    padding: 25px;
+    margin: 40px auto 120px auto;
+    border-radius: 40px;
+    font-size: clamp(1.2em, 3vw, 1.6em);
+    text-decoration: none;
+    color: var(--cinza-claro);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.350);
+}
+
+#botao-projetos:hover {
+    background-color: var(--azul-meio-escuro);
+}
+
+#botao-projetos:visited {
+    text-decoration: none;
+    color: var(--cinza-claro);
+}
+
+#contatos {
+    background-color: var(--cinza-claro);
+    #conteudo-contatos {
+        grid-column: 2;
+        
     }
 }

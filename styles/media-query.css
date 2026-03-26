@@ -1,16 +1,33 @@
 @charset "UTF-8";
 
+:root {
+    --tamanho-max-1200: 1fr 80vw 1fr;
+    --tamanho-max-1000: 1fr 85vw 1fr;
+    --tamanho-max-470: 1fr 90vw 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-mim, #projetos, #contatos {
+        grid-template-columns: var(--tamanho-max-1200);
+    }
+    #title-sobre-mim {
+        width: 80vw;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #inicio-container {
         #conteudo-inicio {
-            grid-template-columns: auto 1fr auto;
+            grid-template-columns: 1fr auto 1fr;
             justify-items: center;
             #texto-inicio {
                 grid-column: 2;
             }
-            img {
+            picture {
                 grid-column: 2;
-                animation: girar 5s linear infinite;
+                img {
+                    animation: girar 5s linear infinite;
+                }
             }
         }
     }
@@ -21,71 +38,88 @@
     }
 
     #sobre-mim, #projetos, #contatos {
-        grid-template-columns: auto 85vw auto;
+        grid-template-columns: var(--tamanho-max-1000);
     }
 
-    article#sobre-mim {
-        #stacks {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
-            margin-top: 70px;
-            h2 {
-                margin-top: -110px;
-            }
-            #dados {
-                grid-row: 2;
-                width: 100%;
-                flex-flow: row wrap;
-                justify-content: space-between;
-
-                .tags-container {
-                    display: flex;
-                    flex-direction: column;
-                    flex: 1 1 200px;
-
-                    .tags-sobre-mim {
-                        flex-basis: 1 1 150px;
-                    }
-                }
-            }
-            #card-sobre-mim {
-                width: 100%;
-                grid-row: 1;
-                height: 400px;
-                aspect-ratio: none;
-                border-radius: initial;
+    #title-sobre-mim {
+        width: 85vw;
+    }
+    #sobre-mim {
+        #inicio-sobre-mim {
+            flex-direction: column-reverse;
+            grid-column: 1 / span 3;
+            gap: 60px;
+            #info-sobre-mim {
+                margin-top: 0px;
+                border-radius: 0px;
                 text-align: left;
-                padding: 0;
+                padding: 30px 0;
+                display: grid;
+                max-width: none;
+                grid-template-columns: var(--tamanho-max-1000);
+                h3 {
+                    grid-column: 2;
+                }
                 p {
-                    font-size: 1em;
+                    grid-column: 2;
+                }
+                div#icones-sociais {
+                    grid-column: 2;
+                    justify-content: center;
                 }
             }
-        }
-        #fundoazul {
-            height: 400px;
-            margin-top: 70px;
-            grid-column: 1;
-            grid-row: 1;
-        }
-        #fundoazul2 {
-            height: 400px;
-            margin-top: 70px;
-            grid-row: 1;
-            grid-column: 3;
-            background-color: var(--azul-escuro);
-            z-index: -1;
-        }
+            #stacks-sobre-mim {
+                grid-column: 2;
+                width: 85vw;
+                flex-flow: row wrap;
+                align-self: center;
+            }
+        } /* Fim #inicio-sobre-mim*/
     }
 
-    .projeto-info {
-        display: grid;
-        grid-template-columns: auto 1fr;
+    #fundo-azul {
+        display: none;
+    }
+
+    @media screen and (max-width: 823.8px) {
+        .projeto-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    }
+    @media screen and (max-width: 704px) {
+        header {
+            padding: 0;
+        }
+        header > nav > ul{
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            position: absolute;
+            top: 76px;
+            right: 0;
+            gap: 0px;
+            border-top: 2px solid #ebebeb;
+            p {
+                border-bottom: 2px solid #ebebeb;
+            }
+        }
+        header > nav > #menuIcone {
+            display: block;
+        }
+        .projeto-info {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 470px) {
     #sobre-mim, #projetos, #contatos {
-        grid-template-columns: auto 80vw auto;
+        grid-template-columns: var(--tamanho-max-470);
+    }
+    #title-sobre-mim {
+        width: 90vw;
     }
 }

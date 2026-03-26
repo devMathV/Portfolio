@@ -10,65 +10,69 @@
     <script src="https://kit.fontawesome.com/1e76331107.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <p id="nome">Matheus Viégas</p>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contatos</a></li>
+            <ul id="menu" onclick="clickItem()">
+                <li><a href="#"><p>Início</p></a></li>
+                <li><a href="#sobre-mim"><p>Sobre mim</p></a></li>
+                <li><a href="#projetos"><p>Projetos</p></a></li>
+                <li><a href="#contatos"><p>Contatos</p></a></li>
             </ul>
+            <div id="menuIcone" onclick="clickMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
-        <!-- <div id="configs">
-            <p id="idioma" onclick="mudarIdioma()">PT-BR</p>
-            <p id="tema" onclick="mudarTema()"><i class="fa-solid fa-moon"></i></p>
-        </div> -->
     </header>
 
     <main>
         <section id="inicio-container">
             <div id="conteudo-inicio">
                 <div id="texto-inicio">
-                    <h2>Desenvolvedor <span>Full Stack</span></h2>
+                    <h2>Desenvolvedor <br><span>Full Stack</span></h2>
                     <p>Do back-end ao front-end: construindo pontes entre dados e experiência.</p>
                 </div>
-                <img src="images/boneco-matheus.png" alt="Boneco de Matheus Viégas">
+                <picture>
+                    <source media="(max-width: 520px)" srcset="images/boneco-matheus-peq.png" sizes="image/png">
+                    <img src="images/boneco-matheus.png" alt="Boneco de Matheus Viégas">
+                </picture>
             </div>
         </section>
 
         <section id="conteudo-container">
+            <div id="title-sobre-mim">
+                <h2>Sobre mim</h2>
+            </div>
             <article id="sobre-mim">
-                <div id="stacks">
-                    <h2>Sobre mim</h2>
-                    <div id="dados">
-                        <div class="tags-container">
+                <div id="inicio-sobre-mim">
+                    <div id="stacks-sobre-mim">
+                        <div class="stacks-item">
                             <h4><i class="fa-solid fa-display"></i> Front-End</h4>
-                            <div class="tags-sobre-mim">
+                            <div class="stacks-tags">
                                 <p>HTML5</p>
                                 <p>CSS3</p>
                                 <p>Javascript</p>
                             </div>
                         </div>
-                        <div class="tags-container">
+                        <div class="stacks-item">
                             <h4><i class="fa-solid fa-laptop-code"></i> Back-End</h4>
-                            <div class="tags-sobre-mim">
+                            <div class="stacks-tags">
                                 <p>Node.js</p>
                                 <p>.NET</p>
                                 <p>Typescript</p>
                             </div>
                         </div>
-                        <div class="tags-container">
+                        <div class="stacks-item">
                             <h4><i class="fa-solid fa-database"></i> Banco de Dados</h4>
-                            <div class="tags-sobre-mim">
+                            <div class="stacks-tags">
                                 <p>MySQL</p>
                                 <p>SQL</p>
                             </div>
                         </div>
-                        <div class="tags-container">
+                        <div class="stacks-item">
                             <h4><i class="fa-solid fa-microchip"></i> Tecnologias</h4>
-                            <div class="tags-sobre-mim">
+                            <div class="stacks-tags">
                                 <p>GitHub</p>
                                 <p>Git</p>
                                 <p>VSCode</p>
@@ -77,40 +81,47 @@
                             </div>
                         </div>
                     </div>
-                    <div id="card-sobre-mim">
+                    <div id="info-sobre-mim">
                         <h3>Quem sou eu?</h3>
-                        <p>Desenvolvedor Full Stack em formação com foco em aplicações web. Possuo base sólida em lógica de programação, versionamento com Git e GitHub, banco de dados relacional, APIs REST e desenvolvimento de sistemas web escaláveis. Experiência prática por meio de projetos pessoais disponíveis no meu GitHub.</p>
-                        <div id="card-sociais">
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-instagram"></i>
+                        <p>Desenvolvedor Full Stack em formação com foco em aplicações web. Possuo base sólida em lógica
+                            de programação, versionamento com Git e GitHub, banco de dados relacional, APIs REST e
+                            desenvolvimento de sistemas web escaláveis. Experiência prática por meio de projetos
+                            pessoais disponíveis no meu GitHub.</p>
+                        <div id="icones-sociais">
+                            <a href="https://github.com/devMathV" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mathviegas/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
-                </div> <!-- Fim div#stacks -->
-                <div id="fundoazul"></div>
-                <div id="fundoazul2"></div>
+                </div> <!-- Fim div#inicio-sobre-mim -->
+                <div id="fundo-azul"></div>
                 <div class="linha"></div>
                 <div id="cards-container">
                     <div class="card" style="grid-column: 1;">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <h4>Aprendizado contínuo</h4>
-                        <p>Meu esforço junto a minha facilidade de aprender me tornam um profissional preparado para qualquer situação e sempre em busca de aprender e desenvolver meu conhecimento.</p>
+                        <p>Meu esforço junto a minha facilidade de aprender me tornam um profissional preparado para
+                            qualquer situação e sempre em busca de aprender e desenvolver meu conhecimento.</p>
                     </div>
                     <div class="card" style="grid-column: 3;">
                         <i class="fa-solid fa-crown"></i>
                         <h4>Foco em resultados</h4>
-                        <p>O meu objetivo vai além do código. Busco entender o problema e desenvolver a melhor solução que gere de fato impacto real ao negócio e usuários.</p>
+                        <p>O meu objetivo vai além do código. Busco entender o problema e desenvolver a melhor solução
+                            que gere de fato impacto real ao negócio e usuários.</p>
                     </div>
                     <div class="card" style="grid-column: 5;">
                         <i class="fa-solid fa-folder-tree"></i>
                         <h4>Arquitetura de código</h4>
-                        <p>Desenvolver código não é apenas fazê-lo funcionar, mas torná-lo entendível a longo prazo. Sempre busco desenvolver o código visando a sua legibilidade e manutenção futura.</p>
+                        <p>Desenvolver código não é apenas fazê-lo funcionar, mas torná-lo entendível a longo prazo.
+                            Sempre busco desenvolver o código visando a sua legibilidade e manutenção futura.</p>
                     </div>
                 </div>
             </article> <!-- Fim article#sobre-mim -->
 
             <article id="projetos">
-                <div id="conteudo">
+                <div id="conteudo-projetos">
                     <h2>Projetos</h2>
                     <div class="projeto-info">
                         <img src="images-projeto/projeto01.png" alt="Projeto 01">
@@ -187,36 +198,47 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- Fim div#conteudo -->
+                </div> <!-- Fim div#conteudo-projetos -->
+                <a href="https://github.com/devMathV" id="botao-projetos" target="_blank">
+                    Ver mais no GitHub
+                </a>
             </article> <!-- Fim article#projetos -->
 
             <article id="contatos">
-
+                <div id="conteudo-contatos">
+                    <h2>Contatos</h2>
+                </div>
             </article> <!-- Fim article#contatos -->
         </section>
     </main>
-
-    <footer>
-
-    </footer>
-    <!-- <script>
-        function mudarTema() {
-            let tema = document.querySelector('#tema')
-            if (tema.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-                tema.innerHTML = '<i class="fa-solid fa-sun"></i>'
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 705) {
+                menu.style.display = 'flex'
+                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
             } else {
-                tema.innerHTML = '<i class="fa-solid fa-moon"></i>'
+                menu.style.display = 'none'
+                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
             }
         }
-        function mudarIdioma() {
-            let idioma = document.querySelector('#idioma')
-            if (idioma.innerHTML === 'PT-BR') {
-                idioma.innerHTML = 'EN-US'
-            } else {
-                idioma.innerHTML = 'PT-BR'
+
+        function clickItem() {
+            if (menu.style.display = 'block' && window.innerWidth <= 705) {
+                menu.style.display = 'none'
+                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
             }
         }
-    </script> -->
+
+        function clickMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
+            } else {
+                menu.style.display = 'block'
+                menuIcone.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+            }
+        }
+    </script>
 </body>
 
 </html>
