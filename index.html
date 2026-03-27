@@ -12,13 +12,13 @@
 
 <body onresize="mudouTamanho()">
     <header>
-        <p id="nome">Matheus Viégas</p>
         <nav>
+            <p id="nome">Matheus Viégas</p>
             <ul id="menu" onclick="clickItem()">
-                <li><a href="#"><p>Início</p></a></li>
-                <li><a href="#sobre-mim"><p>Sobre mim</p></a></li>
-                <li><a href="#projetos"><p>Projetos</p></a></li>
-                <li><a href="#contatos"><p>Contatos</p></a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
             </ul>
             <div id="menuIcone" onclick="clickMenu()">
                 <i class="fa-solid fa-bars"></i>
@@ -30,16 +30,20 @@
         <section id="inicio-container">
             <div id="conteudo-inicio">
                 <div id="texto-inicio">
-                    <h2>Desenvolvedor <br><span>Full Stack</span></h2>
+                    <h2>
+                        Prazer, me chamo <br>
+                        <span>Matheus Viégas</span> <br> 
+                        e atuo como <br>
+                        <span> Desenvolvedor Full Stack</span>
+                    </h2>
                     <p>Do back-end ao front-end: construindo pontes entre dados e experiência.</p>
                 </div>
                 <picture>
-                    <source media="(max-width: 520px)" srcset="images/boneco-matheus-peq.png" sizes="image/png">
+                    <source media="(max-width: 470px)" srcset="images/boneco-matheus-peq.png" sizes="image/png">
                     <img src="images/boneco-matheus.png" alt="Boneco de Matheus Viégas">
                 </picture>
             </div>
         </section>
-
         <section id="conteudo-container">
             <div id="title-sobre-mim">
                 <h2>Sobre mim</h2>
@@ -207,12 +211,25 @@
             <article id="contatos">
                 <div id="conteudo-contatos">
                     <h2>Contatos</h2>
-                    <div id="redes-sociais">
-                        <!-- <div class="social">GitHub</div>
-                        <div class="social">Linkedin</div> -->
-                    </div>
-                    <div id="email">
-
+                    <div id="items-contatos">
+                        <div id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Email</p>
+                        </div>
+                        <div id="redes-sociais">
+                            <div class="social" style="background-color: black;">
+                                <i class="fa-brands fa-github"></i>
+                                <p>GitHub</p>
+                            </div>
+                            <div class="social" style="background-color: #0A66C2;">
+                                <i class="fa-brands fa-square-linkedin"></i>
+                                <p>Linkedin</p>
+                            </div>
+                            <div class="social" style="background-color: #e711e3;">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p>Instagram</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article> <!-- Fim article#contatos -->
