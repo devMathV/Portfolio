@@ -12,7 +12,7 @@
         grid-template-columns: var(--tamanho-max-1200);
     }
 
-    #title-sobre-mim {
+    #container-title-sobre-mim {
         width: 80vw;
     }
 }
@@ -47,7 +47,7 @@
         grid-template-columns: var(--tamanho-max-1000);
     }
 
-    #title-sobre-mim {
+    #container-title-sobre-mim {
         width: 85vw;
     }
 
@@ -148,6 +148,11 @@
         #botao-projetos {
             margin-bottom: 90px;
         }
+
+        #contatos > #conteudo-contatos > #entrar-em-contato {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
     }
 }
 
@@ -166,7 +171,7 @@
         }
     }
 
-    #title-sobre-mim {
+    #container-title-sobre-mim {
         width: 90vw;
     }
 

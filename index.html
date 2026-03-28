@@ -16,9 +16,9 @@
             <p id="nome">Matheus Viégas</p>
             <ul id="menu" onclick="clickItem()">
                 <li><a href="#">Início</a></li>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#title-sobre-mim">Sobre mim</a></li>
+                <li><a href="#title-projetos">Projetos</a></li>
+                <li><a href="#title-contatos">Contatos</a></li>
             </ul>
             <div id="menuIcone" onclick="clickMenu()">
                 <i class="fa-solid fa-bars"></i>
@@ -32,7 +32,7 @@
                 <div id="texto-inicio">
                     <h2>
                         Prazer, me chamo <br>
-                        <span>Matheus Viégas</span> <br> 
+                        <span>Matheus Viégas</span> <br>
                         e atuo como <br>
                         <span> Desenvolvedor Full Stack</span>
                     </h2>
@@ -45,8 +45,8 @@
             </div>
         </section>
         <section id="conteudo-container">
-            <div id="title-sobre-mim">
-                <h2>Sobre mim</h2>
+            <div id="container-title-sobre-mim">
+                <h2 id="title-sobre-mim">Sobre mim</h2>
             </div>
             <article id="sobre-mim">
                 <div id="inicio-sobre-mim">
@@ -126,8 +126,8 @@
 
             <article id="projetos">
                 <div id="conteudo-projetos">
-                    <h2>Projetos</h2>
-                    <div class="projeto-info">
+                    <h2 id="title-projetos">Projetos</h2>
+                    <div class="projeto-info" id="projeto01">
                         <img src="images-projeto/projeto01.png" alt="Projeto 01">
                         <div class="descricao-projeto">
                             <h3>API REST com CRUD em Node.js</h3>
@@ -138,9 +138,10 @@
                                 <p>CRUD</p>
                                 <p>Express</p>
                             </div>
+                            <a href="https://github.com/devMathV/ApiBrawlStarsExpress" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
-                    <div class="projeto-info">
+                    <div class="projeto-info" id="projeto02">
                         <img src="images-projeto/projeto02.png" alt="Projeto 02">
                         <div class="descricao-projeto">
                             <h3>API REST com CRUD em .NET</h3>
@@ -151,9 +152,10 @@
                                 <p>CRUD</p>
                                 <p>Entity Framework</p>
                             </div>
+                            <a href="https://github.com/devMathV/DesafioApi" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
-                    <div class="projeto-info">
+                    <div class="projeto-info" id="projeto03">
                         <img src="images-projeto/projeto03.png" alt="Projeto 03">
                         <div class="descricao-projeto">
                             <h3>Minimal API em Node.js</h3>
@@ -163,9 +165,10 @@
                                 <p>Typescript</p>
                                 <p>Fastify</p>
                             </div>
+                            <a href="https://github.com/devMathV/MinimalApiFormula1" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
-                    <div class="projeto-info">
+                    <div class="projeto-info" id="projeto04">
                         <img src="images-projeto/projeto04.png" alt="Projeto 04">
                         <div class="descricao-projeto">
                             <h3>Podcast API em Node.js</h3>
@@ -173,10 +176,12 @@
                                 <p>Node.js</p>
                                 <p>API</p>
                                 <p>Typescript</p>
+                                <p>HTTP Module</p>
                             </div>
+                            <a href="https://github.com/devMathV/PodcastAPI" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
-                    <div class="projeto-info">
+                    <div class="projeto-info" id="projeto05">
                         <img src="images-projeto/projeto05.png" alt="Projeto 05">
                         <div class="descricao-projeto">
                             <h3>Carrinho de Compras em Node.js</h3>
@@ -187,9 +192,10 @@
                                 <p>npm</p>
                                 <p>Package</p>
                             </div>
+                            <a href="https://github.com/devMathV/CarrinhoDeComprasDaShopee" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
-                    <div class="projeto-info">
+                    <div class="projeto-info" id="projeto06">
                         <img src="images-projeto/projeto06.png" alt="Projeto 06">
                         <div class="descricao-projeto">
                             <h3>Gerador de QRCode em Node.js</h3>
@@ -200,6 +206,7 @@
                                 <p>npm</p>
                                 <p>Package</p>
                             </div>
+                            <a href="https://github.com/devMathV/GeradorDeQRCode-Node.js" id="link-repo-projeto" target="_blank">Ver no GitHub</a>
                         </div>
                     </div>
                 </div> <!-- Fim div#conteudo-projetos -->
@@ -210,59 +217,37 @@
 
             <article id="contatos">
                 <div id="conteudo-contatos">
-                    <h2>Contatos</h2>
-                    <div id="items-contatos">
-                        <div id="email">
-                            <i class="fa-solid fa-envelope"></i>
-                            <p>Email</p>
-                        </div>
-                        <div id="redes-sociais">
-                            <div class="social" style="background-color: black;">
-                                <i class="fa-brands fa-github"></i>
-                                <p>GitHub</p>
-                            </div>
-                            <div class="social" style="background-color: #0A66C2;">
-                                <i class="fa-brands fa-square-linkedin"></i>
-                                <p>Linkedin</p>
-                            </div>
-                            <div class="social" style="background-color: #e711e3;">
-                                <i class="fa-brands fa-instagram"></i>
-                                <p>Instagram</p>
+                    <h2 id="title-contatos">Contatos</h2>
+                    <div id="entrar-em-contato">
+                        <div id="titulo-redes-sociais">
+                            <h3>Entre em <span>Contato</span></h3>
+                            <div id="redes-sociais">
+                                <a href="https://github.com/devMathV" target="_blank">
+                                    <p><i class="fa-brands fa-github"></i>/devMathV</p>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mathviegas/" target="_blank">
+                                    <p><i class="fa-brands fa-square-linkedin"></i>/mathviegas</p>
+                                </a>
                             </div>
                         </div>
+                        <form id="form-contato">
+                            <div id="nome-email">
+                                <input type="text" id="nome" name="name" placeholder="Digite seu nome" class="form-info"
+                                    required>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
+                                    class="form-info" required>
+                            </div>
+                            <textarea id="mensagem" name="message" placeholder="Digite sua mensagem" class="form-info"
+                                required></textarea>
+                            <input type="button" value="Enviar" id="botao-enviar">
+                        </form>
                     </div>
                 </div>
             </article> <!-- Fim article#contatos -->
         </section>
     </main>
-    <script>
-        function mudouTamanho() {
-            if (window.innerWidth >= 705) {
-                menu.style.display = 'flex'
-                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
-            } else {
-                menu.style.display = 'none'
-                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
-            }
-        }
-
-        function clickItem() {
-            if (menu.style.display = 'block' && window.innerWidth <= 705) {
-                menu.style.display = 'none'
-                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
-            }
-        }
-
-        function clickMenu() {
-            if (menu.style.display == 'block') {
-                menu.style.display = 'none'
-                menuIcone.innerHTML = '<i class="fa-solid fa-bars"></i>'
-            } else {
-                menu.style.display = 'block'
-                menuIcone.innerHTML = '<i class="fa-solid fa-xmark"></i>'
-            }
-        }
-    </script>
+    <footer>Site Desenvolvido por <a href="https://www.linkedin.com/in/mathviegas/">Matheus Viégas</a></footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

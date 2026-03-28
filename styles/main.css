@@ -16,6 +16,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -42,7 +46,6 @@ header > nav {
             a {
                 background-color: var(--azul-escuro);
                 display: block;
-                text-decoration: none;
                 padding: 25px;
                 height: 100%;
                 color: var(--cinza-claro);
@@ -57,6 +60,7 @@ header > nav {
         font-size: 2.1em;
         color: var(--cinza-claro);
         padding: 12px;
+        cursor: pointer;
     }
 }
 
@@ -161,7 +165,7 @@ div#conteudo-inicio {
     grid-template-columns: 1fr 70vw 1fr;
 }
 
-#title-sobre-mim {
+#container-title-sobre-mim {
     width: 70vw;
     height: 4em;
     margin: auto;
@@ -300,12 +304,13 @@ article#sobre-mim > div#cards-container {
             .descricao-projeto {
                 margin: 0 20px 20px;
                 h3 {
-                    margin: 20px 0px;
+                    margin-top: 20px;
                 }
                 .tags-projeto {
                     display: flex;
                     flex-flow: row wrap;
                     gap: 10px;
+                    margin: 20px 0;
                     
                     p {
                         flex: 0 0 auto;
@@ -313,6 +318,17 @@ article#sobre-mim > div#cards-container {
                         border: 2px solid var(--cinza-claro);
                         border-radius: 8px;
                     }
+                }
+                a#link-repo-projeto {
+                    text-align: center;
+                    display: block;
+                    padding: 20px;
+                    color: var(--cinza-claro);
+                    border: 2px solid var(--cinza-claro);
+                    border-radius: 30px;
+                }
+                a:hover {
+                    background-color: var(--azul-meio-escuro);
                 }
             }
         }
@@ -348,36 +364,85 @@ article#sobre-mim > div#cards-container {
     background-color: var(--cinza-claro);
     #conteudo-contatos {
         grid-column: 2;
-        #items-contatos {
-            margin-top: 4em;
-            display: flex;
-            gap: 10px;
-            #email {
-                width: 90%;
-                background-color: red;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 20px;
-                font-size: 2em;
-                color: white;
+        #entrar-em-contato {
+            margin: 4em 0;
+            background-color: var(--azul-escuro);
+            display: grid;
+            grid-template-columns: 1fr 55%;
+            justify-content: space-between;
+            gap: 40px;
+            color: var(--cinza-claro);
+            padding: clamp(20px, 5vw, 40px);
+            border-radius: 10px;
+            h3 {
+                font-size: 2.6em;
+                margin-bottom: 10px;
+                span {
+                    color: var(--azul-claro);
+                    font-size: 3rem;
+                }
             }
             #redes-sociais {
                 display: flex;
-                flex-flow: column;
+                flex-flow: row wrap;
                 gap: 10px;
-
-                .social {
-                    color: white;
-                    font-size: 2em;
-                    aspect-ratio: 1 / 1;
+                a {
+                    color: var(--cinza-claro);
+                    font-size: 1.4rem;
+                }
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+                .form-info, #botao-enviar {
+                    padding: 10px;
+                    background-color: transparent;
+                    font-size: 1.1rem;
+                    color: var(--cinza-claro);
+                    border: 2px solid var(--cinza-claro);
+                    border-radius: 8px;
+                    outline: none;
+                }
+                .form-info:focus {
+                    border-color: #091a24;
+                }
+                div#nome-email {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 20px;
-                    gap: 5px;
+                    flex-flow: row wrap;
+                    gap: 10px;
+                    input#nome, input#email {
+                        flex: 1 0 220px;
+                    }
+                }
+                textarea {
+                    height: 150px;
+                    resize: none;
+                }
+                #botao-enviar {
+                    background-color: var(--cinza-claro);
+                    color: var(--azul-escuro);
+                    padding: 15px;
+                    cursor: pointer;
+                    transition: background-color .3s, color .3s;
+                }
+                #botao-enviar:hover {
+                    background-color: #091a24;
+                    color: var(--cinza-claro);
                 }
             }
         }
+    }
+}
+
+footer {
+    background-color: var(--azul-escuro);
+    text-align: center;
+    color: var(--cinza-claro);
+    padding: 12px;
+    a {
+        color: var(--cinza-claro);
+        font-weight: bold;
     }
 }
