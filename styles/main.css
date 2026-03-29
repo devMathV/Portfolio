@@ -49,6 +49,7 @@ header > nav {
                 padding: 25px;
                 height: 100%;
                 color: var(--cinza-claro);
+                transition: background .3s;
             }
             a:hover {
                 background-color: var(--azul-meio-escuro);
@@ -223,7 +224,7 @@ div#conteudo-inicio {
                 font-size: clamp(1em, 2vw, 1.2em);
             }
             #icones-sociais {
-                font-size: 3em;
+                font-size: clamp(2.4rem, 4vw, 3rem);
                 display: flex;
                 justify-content: right;
                 gap: 20px;
@@ -327,15 +328,19 @@ article#sobre-mim > div#cards-container {
                     }
                 }
                 a#link-repo-projeto {
+                    background-color: var(--cinza-claro);
+                    font-size: clamp(1.2rem, 2vw, 1.4rem);
                     text-align: center;
                     display: block;
                     padding: 20px;
-                    color: var(--cinza-claro);
+                    color: var(--azul-escuro);
                     border: 2px solid var(--cinza-claro);
                     border-radius: 30px;
+                    transition: background .3s, color .3s;
                 }
-                a:hover {
-                    background-color: var(--azul-meio-escuro);
+                a#link-repo-projeto:hover {
+                    background-color: #091a24;
+                    color: var(--cinza-claro);
                 }
             }
         }
@@ -352,6 +357,7 @@ article#sobre-mim > div#cards-container {
     text-decoration: none;
     color: var(--cinza-claro);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.350);
+    transition: background .3s;
 }
 
 #botao-projetos:hover {
@@ -449,5 +455,10 @@ footer {
     a {
         color: var(--cinza-claro);
         font-weight: bold;
+        transition: color .3s;
     }
+}
+
+footer > a:hover {
+    color: var(--azul-claro);
 }
