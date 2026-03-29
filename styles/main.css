@@ -68,6 +68,7 @@ main {
     overflow: hidden;
 }
 
+/*Início section#inicio-container*/
 section#inicio-container {
     background-image:  url(../images/fundo-inicio.jpg);
     display: grid;
@@ -75,6 +76,7 @@ section#inicio-container {
     min-height: calc(105vh - 68.4px);
 }
 
+/*Início div#conteudo-inicio*/
 div#conteudo-inicio {
     grid-row: 2;
     display: grid;
@@ -151,6 +153,7 @@ div#conteudo-inicio {
     92% { transform: translate(0, 0);}
     100% { transform: translate(0, 0);}
 }
+/*Fim section#inicio-container*/
 
 #conteudo-container h2 {
     position: absolute;
@@ -165,6 +168,7 @@ div#conteudo-inicio {
     grid-template-columns: 1fr 70vw 1fr;
 }
 
+/*Início #sobre-mim*/
 #container-title-sobre-mim {
     width: 70vw;
     height: 4em;
@@ -247,7 +251,9 @@ div.linha {
     border-radius: 1px;
     margin: 90px 0px;
 }
+/*Fim #sobre-mim*/
 
+/*Início div#cards-container*/
 article#sobre-mim > div#cards-container {
     grid-column: 2;
     display: flex;
@@ -275,8 +281,9 @@ article#sobre-mim > div#cards-container {
             font-size: 1em;
         }
     }
-}
+} /*Fim div#card-container*/
 
+/*Início #projetos*/
 #projetos {
     background-color: var(--azul-claro);
     #conteudo-projetos {
@@ -355,7 +362,9 @@ article#sobre-mim > div#cards-container {
     text-decoration: none;
     color: var(--cinza-claro);
 }
+/*Fim #projetos*/
 
+/*Início contatos*/
 #contatos > #conteudo-contatos > h2 {
     margin-top: -36px;
 }
@@ -389,6 +398,7 @@ article#sobre-mim > div#cards-container {
                 a {
                     color: var(--cinza-claro);
                     font-size: 1.4rem;
+                    text-decoration: underline;
                 }
             }
             form {
@@ -397,6 +407,7 @@ article#sobre-mim > div#cards-container {
                 gap: 10px;
                 margin-top: 10px;
                 .form-info, #botao-enviar {
+                    width: 100%;
                     padding: 10px;
                     background-color: transparent;
                     font-size: 1.1rem;
@@ -404,20 +415,13 @@ article#sobre-mim > div#cards-container {
                     border: 2px solid var(--cinza-claro);
                     border-radius: 8px;
                     outline: none;
+                    transition: border .3s;
                 }
-                .form-info:focus {
+                .form-info:focus, .form-info:hover {
                     border-color: #091a24;
                 }
-                div#nome-email {
-                    display: flex;
-                    flex-flow: row wrap;
-                    gap: 10px;
-                    input#nome, input#email {
-                        flex: 1 0 220px;
-                    }
-                }
                 textarea {
-                    height: 150px;
+                    height: 250px;
                     resize: none;
                 }
                 #botao-enviar {
@@ -434,12 +438,13 @@ article#sobre-mim > div#cards-container {
             }
         }
     }
-}
+} /*Fim #contatos*/
 
 footer {
     background-color: var(--azul-escuro);
     text-align: center;
     color: var(--cinza-claro);
+    font-size: 1.2rem;
     padding: 12px;
     a {
         color: var(--cinza-claro);

@@ -152,6 +152,12 @@
         #contatos > #conteudo-contatos > #entrar-em-contato {
             grid-template-columns: 1fr;
             gap: 20px;
+            #titulo-redes-sociais {
+                text-align: center;
+                #redes-sociais {
+                    justify-content: center;
+                }
+            }
         }
     }
 }
